@@ -1,0 +1,17 @@
+---
+# tasks file for rundeck (Ubuntu specific)
+
+- name: Add Rundeck APT repository
+  apt_repository: >
+    repo='deb http://dl.bintray.com/rundeck/rundeck-deb /'
+    state=present
+    update_cache=yes
+  tags: rundeck
+
+- name: Install Rundeck
+  apt: name=rundeck state=present force=yes update_cache=yes
+  tags: rundeck
+
+- name: Start the Rundeck service and enable on boot
+  service: name=rundeckd state=started enabled=yes
+  tags: rundeck
