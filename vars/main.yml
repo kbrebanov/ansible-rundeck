@@ -1,2 +1,4 @@
 ---
 # vars file for rundeck
+
+rundeck_service_name: rundeckd

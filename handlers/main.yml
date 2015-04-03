@@ -1,2 +1,6 @@
 ---
 # handlers file for rundeck
+
+- name: restart rundeck
+  service: name={{ rundeck_service_name }} state=restarted
+  tags: rundeck

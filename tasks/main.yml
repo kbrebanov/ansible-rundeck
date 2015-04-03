@@ -12,3 +12,7 @@
 - include: Ubuntu.yml
   when: ansible_distribution == "Ubuntu"
   tags: rundeck
+
+- name: Ensure Rundeck is started and enabled on boot
+  service: name={{ rundeck_service_name }} state=started enabled=yes
+  tags: rundeck
