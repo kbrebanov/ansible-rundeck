@@ -2,4 +2,4 @@
 # vars file for rundeck (Ubuntu specific)
 
 rundeck_packages:
-  - rundeck={{ rundeck_version }}-*
+  - rundeck={{ rundeck_version }}
