@@ -8,6 +8,11 @@
   tags: rundeck
 
 - name: Install Rundeck packages
-  apt: name={{ item }} state=present force=yes update_cache=yes
+  apt: >
+    name={{ item }}
+    state=present
+    force=yes
+    update_cache=yes
+    cache_valid_time=3600
   with_items: rundeck_packages
   tags: rundeck
