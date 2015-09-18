@@ -1,7 +1,7 @@
 rundeck
 =======
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.rundeck-660198.svg)](https://galaxy.ansible.com/list#/roles/3313)
+[![Ansible Role](https://img.shields.io/ansible/role/3313.svg)](https://galaxy.ansible.com/list#/roles/3313)
 
 Installs Rundeck
 
