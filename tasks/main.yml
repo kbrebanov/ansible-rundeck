@@ -3,16 +3,24 @@
 
 - name: Include distribution specific variables
   include_vars: "{{ ansible_distribution }}.yml"
-  tags: rundeck
+  tags:
+    - rundeck
 
 - include: CentOS.yml
   when: ansible_distribution == "CentOS"
-  tags: rundeck
+  tags:
+    - rundeck
 
 - include: Ubuntu.yml
   when: ansible_distribution == "Ubuntu"
-  tags: rundeck
+  tags:
+    - rundeck
 
 - name: Ensure Rundeck is started and enabled on boot
-  service: name={{ rundeck_service_name }} state=started enabled=yes
-  tags: rundeck
+  become: yes
+  service:
+    name: "{{ rundeck_service_name }}"
+    state: started
+    enabled: yes
+  tags:
+    - rundeck

@@ -2,16 +2,21 @@
 # tasks file for rundeck (Ubuntu specific)
 
 - name: Add Rundeck APT repository
-  apt_repository: >
-    repo='deb http://dl.bintray.com/rundeck/rundeck-deb /'
-    state=present
-  tags: rundeck
+  become: yes
+  apt_repository:
+    repo: 'deb http://dl.bintray.com/rundeck/rundeck-deb /'
+    state: present
+  tags:
+    - rundeck
 
 - name: Install Rundeck packages
-  apt: >
-    name={{ item }}
-    state=present
-    force=yes
-    update_cache=yes
-  with_items: rundeck_packages
-  tags: rundeck
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    force: yes
+    update_cache: yes
+  with_items:
+    - "{{ rundeck_packages }}"
+  tags:
+    - rundeck
