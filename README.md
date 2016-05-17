@@ -8,13 +8,13 @@ Installs Rundeck
 Requirements
 ------------
 
-This role requires Ansible 1.4 or higher.
+This role requires Ansible 1.9 or higher.
 
 Role Variables
 --------------
 
 | Name            | Default | Description                   |
-|-----------------|---------|-------------------------------|
+|:----------------|:--------|:------------------------------|
 | rundeck_version | 2.6.1   | Version of Rundeck to install |
 
 Dependencies
