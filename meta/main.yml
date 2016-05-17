@@ -13,4 +13,4 @@ galaxy_info:
   galaxy_tags:
     - system
 dependencies:
-  - { role: kbrebanov.java, java_oracle_version: 7 }
+  - { role: kbrebanov.java, java_implementation: openjdk, java_openjdk_version: 7 }
