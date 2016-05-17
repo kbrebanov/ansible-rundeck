@@ -26,17 +26,19 @@ Example Playbook
 ----------------
 
 Install Rundeck
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.rundeck }
+    - kbrebanov.rundeck
 ```
 
 Install Rundeck specifying version
-```
+```yaml
 - hosts: all
+  vars:
+    rundeck_version: 2.4.1
   roles:
-    - { role: kbrebanov.rundeck, rundeck_version: 2.4.1 }
+    - kbrebanov.rundeck
 ```
 
 License
