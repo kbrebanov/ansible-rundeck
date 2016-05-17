@@ -15,7 +15,7 @@ Role Variables
 
 | Name            | Default | Description                   |
 |:----------------|:--------|:------------------------------|
-| rundeck_version | 2.6.1   | Version of Rundeck to install |
+| rundeck_version | 2.6.7   | Version of Rundeck to install |
 
 Dependencies
 ------------
